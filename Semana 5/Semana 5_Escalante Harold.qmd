@@ -1,0 +1,33 @@
+---
+title: "Semana 5_Crear grafico de barras"
+author: "Escalante Harold"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+categorias <- c("Anemia","SIDA","VIH","Zarampiòn")
+valores <- c(25,40,35,50)
+```
+
+You can add options to executable code like this
+
+```{r}
+barplot(valores,
+        names.arg = categorias,
+        col = "red",
+        main = "GRÁFICO DE BARRAS",
+        xlab = "Categorías",
+        ylab = "Valores",
+        border = "black")
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
