@@ -1,0 +1,27 @@
+---
+title: "Hazar ratio - semana 11"
+author: "ESCALANTE MORENO HAROLD"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+#COEFICIENTE BETA 
+beta<--0.405
+
+#Cálculo del Hazar ratio 
+HR<-exp(beta)
+
+#mostrar resultado 
+HR
+```
+
+```{r}
+#Interpretacion
+cat("Hazard ratio=",round(HR,3),"\n")
+cat("El programa reduce el riesgo en", round((1-HR)*100,1),"% respecto al grupo de control.")
+```

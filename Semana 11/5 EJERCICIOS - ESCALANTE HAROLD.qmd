@@ -1,0 +1,81 @@
+---
+title: "5 ejercicios - semana 11"
+author: "ESCALANTE HAROLD MORENO"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+EJERCICIO 1
+
+```{r}
+#COEFICIENTE BETA 
+beta <- 0.405
+
+#CALCULO DEL HAZARD RATIO 
+HR <- exp(beta) 
+
+#MOSTAR RESULTADO 
+HR
+```
+
+```{r}
+#INTERPRETACIÓN
+cat("Hazard ratio =", round(HR, 2), "\n")
+cat("El grupo expuesto aumenta el riesgo en", round((HR - 1) * 100, 1), "% respecto al grupo de referencia.")
+```
+
+EJERCICIO 2
+
+```{r}
+#CALCULO DEL HAZARD RATIO 
+HR <- 0.75
+
+#INTERPRETACIÓN
+cat("Hazard ratio =", round(HR, 2), "\n")
+cat("El programa educativo de enfermería reduce el riesgo en", round((1 - HR) * 100, 1), "% respecto al grupo de control.")
+```
+
+EJERCICIO 3
+
+```{r}
+#CALCULO DEL HAZARD RATIO 
+HR <- 1.35
+
+#INTERPRETACIÓN
+cat("Hazard ratio =", round(HR, 2), "\n")
+cat("Los pacientes hipertensos aumentan el riesgo en", round((HR - 1) * 100, 1), "% respecto al grupo sin hipertensión.")
+```
+
+EJERCICIO 4
+
+```{r}
+#COEFICIENTE BETA 
+beta <- -1.20
+
+#CALCULO DE HAZARD RATIO 
+HR <- exp(beta)
+
+#INTER´RETACIÓN
+cat("Hazard ratio =", round(HR, 3), "\n")
+cat("El factor analizado reduce el riesgo en", round((1 - HR) * 100, 1), "% respecto al grupo de control.")
+```
+
+EJERCICIO 5
+
+```{r}
+#Hazard Ratio reportado
+HR<-2.10
+
+#Incremento porcentual del riesgo
+incremento<-(HR-1)*100
+```
+
+```{r}
+#MOSTRAR RESULTADO
+cat("Hazard ratio=",HR,"\n")
+cat("Incremento del riesgo=",incremento,"%\n")
+```
