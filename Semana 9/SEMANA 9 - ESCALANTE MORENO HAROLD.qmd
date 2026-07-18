@@ -1,0 +1,157 @@
+---
+title: "Semana 9_Regresión y correlación"
+author: "ESCALANTE MORENO HAROLD"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+CASO 1
+
+```{r}
+#DATOS
+x<-c(2,4,6,8,10)
+y<-c(65,70,75,82,88)
+
+#Correlaciòn de pearsson
+cor(x,y)
+
+#Obtener coeficiente de relaciòn
+#Modelo 
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Hay una correlaciòn fuerte positiva entre ambas variables
+
+#Cuando recibe una capacitaciòn de 12 horas de duraciòn
+predict(modelo,data.frame(x=12))
+
+#gràfico
+plot(x,y,main = "Horas de capacitación vs Calidad de atención",
+     xlab="Horas de Capacitación",
+     ylab="Puntaje de Calidad",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+CASO 2
+
+```{r}
+#DATOS
+x<-c(1,2,3,4,5)
+y<-c(60,68,75,82,90)
+
+#Correlaciòn de pearsson
+cor(x,y)
+
+#Obtener coeficiente de relaciòn
+#Modelo 
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Hay una correlaciòn fuerte positiva entre ambas variables
+
+#Cuando el tiempo de cuidado es de 6 horas de duraciòn
+predict(modelo,data.frame(x=6))
+
+#gràfico
+plot(x,y,main = "Tiempo de cuidado  vs Nivel de Satisfacción ",
+     xlab="Tiempo de cuidado",
+     ylab="Satisfacción (%)",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+CASO 3
+
+```{r}
+#DATOS
+x<-c(4,6,8,10,12)
+y<-c(2,3,4,5,7)
+
+#Correlaciòn de pearsson
+cor(x,y)
+
+#Obtener coeficiente de relaciòn
+#Modelo 
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Hay una correlaciòn fuerte positiva entre ambas variables
+
+#Cuanto es el tiempo de respuesta para 14 pacientes
+predict(modelo,data.frame(x=14))
+
+#gràfico
+plot(x,y,main = "Pacientes asignados   vs Tiempo de respuesta ",
+     xlab="Pacientes asignados ",
+     ylab="Tiempo de respuesta (min)",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+CASO 4
+
+```{r}
+#DATOS
+x<-c(1.0,1.5,2.0,2.5,3.0)
+y<-c(145,142,138,134,130)
+
+#Correlaciòn de pearsson
+cor(x,y)
+
+#Obtener coeficiente de relaciòn
+#Modelo 
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Hay una correlaciòn fuerte negativa entre ambas variables
+
+#Cuanto es la presión arterial para una persona que consume 3.5 litros de agua al día.
+predict(modelo,data.frame(x=3.5))
+
+#gràfico
+plot(x,y,main = "Consumo de agua   vs Presión arterial ",
+     xlab="Consumo de agua (litros) ",
+     ylab="Presión arterial (mmHg) ",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
+
+CASO 5
+
+```{r}
+#DATOS
+x<-c(50,60,70,80,90)
+y<-c(190,175,165,150,135)
+
+#Correlaciòn de pearsson
+cor(x,y)
+
+#Obtener coeficiente de relaciòn
+#Modelo 
+modelo <- lm(y ~ x)
+coef(modelo)
+
+#Hay una correlaciòn fuerte negativa entre ambas variables
+
+#Cuanto es el nivel de glucosa para una adherencia del 95%.
+predict(modelo,data.frame(x=95))
+
+#gràfico
+plot(x,y,main = "Adherencia    vs Glucosa  ",
+     xlab="Adherencia (%)  ",
+     ylab="Glucosa (mg/dL) ",
+     pch=19)
+
+abline(modelo,lwd=2)
+```
